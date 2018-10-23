@@ -28,4 +28,18 @@ export class ReactiveFormsComponent implements OnInit {
     console.log(userForm.value);
   }
 
+  fillForm() {
+    this.userForm.setValue({
+      firstname: 'Horst',
+      lastname: 'Doroschenko',
+      email: 'doroschenko@develappers.de'
+    });
+  }
+
+  updateFormValue() {
+    this.userForm.patchValue({
+      firstname: 'Gregor'
+    });
+  }
+
 }
