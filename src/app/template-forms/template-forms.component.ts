@@ -16,7 +16,10 @@ export class TemplateFormsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  save(userForm: User) {
+    console.log(userForm);
   }
 
 }

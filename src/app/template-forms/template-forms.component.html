@@ -1,17 +1,26 @@
 <h4>Template-Driven Forms</h4>
 
-<form>
+<form #userForm="ngForm" (ngSubmit)="save(userForm.value)">
   <div class="form-group">
     <label>Firstname</label>
-    <input type="text" class="form-control">
+    <input type="text"
+           class="form-control"
+           name="firstname"
+           [(ngModel)]="user.firstname">
   </div>
   <div class="form-group">
     <label>Lastname</label>
-    <input type="text" class="form-control">
+    <input type="text"
+           class="form-control"
+           name="lastname"
+           [(ngModel)]="user.lastname">
   </div>
   <div class="form-group">
     <label>Email</label>
-    <input type="text" class="form-control">
+    <input type="text"
+           class="form-control"
+           name="email"
+           [(ngModel)]="user.email">
   </div>
   <div class="form-group">
     <button type="submit"
