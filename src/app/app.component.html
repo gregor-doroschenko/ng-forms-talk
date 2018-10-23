@@ -1,6 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <p>Test</p>
+  <h1>Angular Meetup Dresden #6: Forms in Angular</h1>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link"
+         [routerLink]="'/'"
+         href="javascript:;">Start</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+         [routerLink]="'/template-driven-forms'"
+         routerLinkActive="active"
+         href="javascript:;">Example: Template-Driven Forms</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+         [routerLink]="'/reactive-forms'"
+         routerLinkActive="active"
+         href="javascript:;">Example: Reactive Forms</a>
+    </li>
+  </ul>
 </div>
-
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
