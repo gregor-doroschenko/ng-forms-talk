@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user.interface';
 
 @Component({
   selector: 'app-template-forms',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-forms.component.scss']
 })
 export class TemplateFormsComponent implements OnInit {
+
+  user: User = {
+    firstname: 'Gregor',
+    lastname: 'Doroschenko',
+    email: 'doroschenko@develappers.de'
+  };
 
   constructor() { }
 
