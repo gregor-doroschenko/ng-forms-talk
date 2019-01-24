@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -14,11 +14,6 @@ export class ReactiveFormsComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    this.userForm = new FormGroup({
-      firstname: new FormControl('Gregor'),
-      lastname: new FormControl('Doroschenko'),
-      email: new FormControl('doroschenko@develappers.de')
-    });
   }
 
   createForm() {
@@ -26,14 +21,7 @@ export class ReactiveFormsComponent implements OnInit {
       firstname: ['', [Validators.required]],
       lastname: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-    });
-  }
-
-  createSecondForm() {
-    this.userForm = new FormGroup({
-      firstname: new FormControl('Gregor'),
-      lastname: new FormControl('Doroschenko'),
-      email: new FormControl('doroschenko@develappers.de')
+      password: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
 
@@ -45,7 +33,8 @@ export class ReactiveFormsComponent implements OnInit {
     this.userForm.setValue({
       firstname: 'Horst',
       lastname: 'Doroschenko',
-      email: 'doroschenko@develappers.de'
+      email: 'doroschenko@develappers.de',
+      password: 'mysecretpassword'
     });
   }
 
